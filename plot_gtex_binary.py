@@ -5,7 +5,10 @@ matplotlib.use('Agg')
 import matplotlib.pylab as plt
 import argparse
 import data_viz
-
+import importlib
+sys.path.append('hash-tables-adziulko')
+hf = importlib.import_module('hash-tables-adziulko.hash_functions')
+ht = importlib.import_module('hash-tables-adziulko.hash_tables')
 
 
 def linear_search(key, L):
@@ -75,6 +78,35 @@ def main():
 
     sample_id_col_name = 'SAMPID'
 
+    samples_to_count_map = ht.LPHashTable(1000001, hf.h_rolling)
+
+    version = None
+    dim = None
+    header = None
+    num_headers = 3
+    counts = []
+    for line in data_file_name:
+        A = line.rstrip().split('\t')
+
+        if version == None:
+            version = A
+            continue
+
+        if dim == None:
+            dime = A
+            continue
+
+        if header == None:
+            header = A
+            continue
+
+        if A[1] == gene_name:
+            for a in A[2:]:
+                counts.append(int(a))
+            break
+        data_file_name.close()
+
+        samples = header[2:]
 
 
 #binary_serach

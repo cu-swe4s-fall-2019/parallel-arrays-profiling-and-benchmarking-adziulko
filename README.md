@@ -13,7 +13,7 @@ $ python plot_gtex.linear py --fngr GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_ge
 ```
 to run binary search follow the example below in command line:
 ```
-$ python plot_gtex.binary py --fngr GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.acmg_59.gct.gz --fna GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --t SMTS --tg ACTA2 --bfn test2.png
+$ python plot_gtex_binary.py --fngr GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.acmg_59.gct.gz --fna GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --t SMTS --tg ACTA2 --bfn test2.png
 ```
 
 --fngr = Input RNA Seq gene read file (gziped)

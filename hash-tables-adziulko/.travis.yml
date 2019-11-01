@@ -12,9 +12,6 @@ before_install:
     - conda install --yes python=3.6
 
 script:
-    - git submodule update --init
-    - python test_hash_tables.py
     - python test_hash.py
-    - pycodestyle plot_gtex_binary.py
-    - pycodestyle hash_tables.py
     - pycodestyle hash_functions.py
+    - pycodestyle hash_tables.py
